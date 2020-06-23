@@ -78,6 +78,18 @@
 			}
 			$("#image"+counter).click();
 		});
+
+		var paused = false;
+
+		$("#bigImg").click(function(){
+			paused=!paused;
+		});
+
+		setInterval(function(){
+			if(!paused){
+				$("#forward").click();
+			};
+		}, 1000);
 	</script>
 <!-- 
 <script type="text/javascript">
